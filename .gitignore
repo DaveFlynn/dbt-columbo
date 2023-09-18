@@ -2,6 +2,9 @@
 target/
 dbt_packages/
 logs/
+venv/
+**/.DS_Store
+*.duckdb
+.user.yml
 .piperider
-user.yml
-user.yaml
+dbt_packages
