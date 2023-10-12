@@ -1,0 +1,6 @@
+sources:
+  - name: raw_columbo
+    tables:
+      - name: first_appearance
+        meta:
+          external_location: "read_csv_auto('data/columbo-first-appearances-mark-longair.csv', filename=True)"

@@ -1,0 +1,10 @@
+columbo:
+  outputs:
+    dev:
+      type: duckdb
+      path: columbo.duckdb
+      extensions:
+        - httpfs
+        - parquet
+
+  target: dev

@@ -1,2 +1,3 @@
 dbt-duckdb>=1.6
 piperider[duckdb]
+git+https://github.com/cinemagoer/cinemagoer
