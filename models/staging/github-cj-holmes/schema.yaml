@@ -2,10 +2,61 @@ sources:
   - name: cjholmes
     tables:
       - name: first_appearance
-        description: 'raw Columbo data sourced from columbo-first-appearances-mark-longair.csv'
         meta:
           external_location: "read_csv_auto('data/cjholmes__columbo-first-appearances-mark-longair.csv', filename=True)"
       - name: columbo_data
         description: 'Columbo data'
         meta:
           external_location: "read_csv_auto('data/cjholmes__columbo_data.csv', filename=True)"
+
+
+models:
+  - name: stg_cjholmes__first_appearances
+    description: 'Raw Columbo data sourced from columbo-first-appearances-mark-longair.csv'
+
+    columns:
+      - name: first_appearance_seconds
+        description: The number of seconds before Columbo first appears
+        tests:
+          - not_null
+
+      - name: first_appearance
+        description: The timecode when columbo first appears
+        tests:
+          - not_null
+
+      - name: total_length_seconds
+        description: The total length of the episodes in seconds
+        tests:
+          - not_null
+
+      - name: total_length
+        description: The total length of the episode in time format
+        tests:
+          - not_null
+
+      - name: title
+        description: The title of the episode
+        tests:
+          - not_null
+
+      - name: code
+        description: the season and epsiode number
+        tests:
+          - not_null
+
+      - name: original_air_date
+        description: The original air date for the episode
+        tests:
+          - not_null
+
+      - name: peter_falks_age
+        description: Peter Falk's age in this episode
+        tests:
+          - not_null
+
+      - name: appearance_notes
+        description: Notes about this apearance
+
+      - name: murderer_occuptation
+        description: The occuptation of the murderer

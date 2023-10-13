@@ -4,3 +4,34 @@ sources:
       - name: series_overview
         meta:
             external_location: "read_csv_auto('data/wikipedia__series-overview.csv', filename=True)"
+
+
+models:
+  - name: stg_wikipedia__series_overview
+    description: 'Series overview sourced from Wikipedia'
+
+    columns:
+      - name: season
+        description: Season number
+        tests:
+          - not_null
+
+      - name: episodes
+        description: Number of episodes for season
+        tests:
+          - not_null
+
+      - name: first_aired
+        description: The date this season first aired
+        tests:
+          - not_null
+
+      - name: last_aired
+        description: The date this season last aired
+        tests:
+          - not_null
+
+      - name: network
+        description: The network this season first aired on
+        tests:
+          - not_null
