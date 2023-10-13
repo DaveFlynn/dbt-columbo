@@ -1,7 +1,7 @@
 select 
-	split("Code", 'x')[1] as season,
-	split("Code", 'x')[2] as episode,
+	split("code", 'x')[1] as season,
+	split("code", 'x')[2] as episode,
 	title
 from
-appearances
+stg_cjholmes__first_appearances
 

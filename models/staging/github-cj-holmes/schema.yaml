@@ -1,6 +1,11 @@
 sources:
-  - name: raw_columbo
+  - name: cjholmes
     tables:
       - name: first_appearance
+        description: 'raw Columbo data sourced from columbo-first-appearances-mark-longair.csv'
         meta:
-          external_location: "read_csv_auto('data/columbo-first-appearances-mark-longair.csv', filename=True)"
+          external_location: "read_csv_auto('data/cjholmes__columbo-first-appearances-mark-longair.csv', filename=True)"
+      - name: columbo_data
+        description: 'Columbo data'
+        meta:
+          external_location: "read_csv_auto('data/cjholmes__columbo_data.csv', filename=True)"

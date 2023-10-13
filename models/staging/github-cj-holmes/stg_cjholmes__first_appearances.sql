@@ -2,7 +2,7 @@ with
 
 source as (
 	
-	select * from {{ source('raw_columbo', 'first_appearance') }}
+	select * from {{ source('cjholmes', 'first_appearance') }}
 
 ),
 
@@ -21,6 +21,13 @@ renamed as (
 	date_part('second', "Total length") as total_length_seconds,
 
 	cast("Total Length" as string) as total_length,
+
+	Title as title, 
+	Code as code,
+	"Original air date" as original_air_date,
+	"Peter Falk's Age" as peter_falks_age,
+	"Appearance notes" as appearance_notes,
+	"Occupation of murderer" as murderer_occupaton
 
 	from source
 

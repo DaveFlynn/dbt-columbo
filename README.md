@@ -1,4 +1,21 @@
-Welcome to your new dbt project!
+Just a Columbo fan making a dbt project. <br />
+This is a recreation in dbt of the [Columbo](https://github.com/cj-holmes/columbo) project by cjholmes 
+
+1. Install requirements
+```
+pip install -r requirements.txt
+```
+
+2. Download source data
+```
+python get-data.py
+```
+
+3. Build
+```
+dbt build
+```
+
 
 ### Using the starter project
 

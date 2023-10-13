@@ -1,0 +1,6 @@
+sources:
+  - name: wikipedia
+    tables:
+      - name: series_overview
+        meta:
+            external_location: "read_csv_auto('data/wikipedia__series-overview.csv', filename=True)"
