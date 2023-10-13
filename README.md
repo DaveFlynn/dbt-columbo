@@ -8,7 +8,7 @@ pip install -r requirements.txt
 
 2. Download source data
 ```
-python get-data.py
+python get_data.py
 ```
 
 3. Build

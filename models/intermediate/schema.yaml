@@ -1,0 +1,16 @@
+models:
+  - name: episodes
+    description: 'Columbo episodes'
+
+    # columns:
+    #   - name: title
+    #     description: The title of episodes
+    #     tests:
+    #       - not_null
+      
+    #   - name: season
+    #     description: The season that the episode belongs to
+
+    #   - name: episode_number
+    #     description: The episode number for the season
+    #     

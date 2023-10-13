@@ -4,6 +4,9 @@ sources:
       - name: series_overview
         meta:
             external_location: "read_csv_auto('data/wikipedia__series-overview.csv', filename=True)"
+      - name: columbo_seasons
+        meta:
+            external_location: "read_csv_auto('data/wikipedia__columbo_seasons.csv', filename=True)"
 
 
 models:
@@ -35,3 +38,12 @@ models:
         description: The network this season first aired on
         tests:
           - not_null
+
+  - name: stg_wikipedia__columbo_seasons
+    description: 'Series data sourced from Wikipedia'
+
+    columns:
+      - name: no_in_series
+        description: The numbner of this episode in the full series
+        tests:
+          - not_null 
