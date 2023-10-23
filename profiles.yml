@@ -3,6 +3,7 @@ columbo:
     dev:
       type: duckdb
       path: columbo.duckdb
+      schema: "{{ env_var('DBT_SCHEMA', 'dev') }}"
       extensions:
         - httpfs
         - parquet
